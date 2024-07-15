@@ -15,17 +15,17 @@ export default function Gallery() {
 
     return (
         <div>
-
             {tours.map(tour => (            // Maps and displays for each tour in the array
-                <div key={tour.id}>
+                <div key={tour.id} className="tour">
                     <h2>{tour.name}</h2>
                     <img
                         src={tour.image}
                         alt={tour.name}
-                        width="350"
+                        width="500"
                     />
                     <br />
                     <button onClick={handleDetailsClick}>{showDetails ? 'Show Less' : 'Read More'}</button>
+                    {" "}
                     <button
                         onClick={() => {
                             setTours(
@@ -34,7 +34,7 @@ export default function Gallery() {
                         }}
                     >Not Interested</button>
                     <br />
-                    {showDetails && < b > ${tour.price}</b>}                    {/* Displays price and info only when showDetails is true */}
+                    {showDetails && < b > Price: ${tour.price}</b>}                    {/* Displays price and info only when showDetails is true */}
                     <br />
                     {showDetails && < p >{tour.info}</p>}
                 </div>
