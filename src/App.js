@@ -6,8 +6,11 @@ import "./App.css"
 
 export default function App() { // Runs App function, displaying Gallery
   return (
-    <div className="app">
-    <Gallery/>
-    </div>
+    <>
+      <h1>Please enjoy the following tours:</h1>
+      <div className="app">
+        <Gallery />
+      </div>
+    </>
   )
 }
